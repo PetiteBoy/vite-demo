@@ -8,4 +8,14 @@
 <body>
   这是一个vite项目
 </body>
+<script>
+  const constraints = { audio: true };
+  navigator.mediaDevices.getUserMedia(constraints).then(
+    stream => {
+      console.log('麦克风授权成功！')
+    }
+  ).catch((error) => {
+    console.log('获取权限失败', error);
+  });
+</script>
 </html>
